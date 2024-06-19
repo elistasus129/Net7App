@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NHibernate" Version="5.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DB\Interface\" />
+    <Folder Include="DB\Manager\" />
+  </ItemGroup>
+
 </Project>
