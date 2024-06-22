@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Base.DB.Interface
 {
-    public interface IRepositoryService<T> where T:class,IEntity,new()
+    public interface IRepositoryService<T> where T : class, IEntity, new()
     {
         List<T> GetList(Expression<Func<T,bool>> filter=null);
         
