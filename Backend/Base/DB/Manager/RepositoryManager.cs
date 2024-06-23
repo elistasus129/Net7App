@@ -35,22 +35,39 @@ namespace Base.DB.Manager
 
         public void Delete(T entity)
         {
-            throw new NotImplementedException();
+            using (var session = _nHibernateHelper.OpenSession())
+            {
+                session.Delete(entity);
+                session.Flush();
+                session.Clear();
+            }
         }
 
         public T Get(Expression<Func<T, bool>> filter = null)
         {
-            throw new NotImplementedException();
+            using (var session = _nHibernateHelper.OpenSession())
+            {
+                return session.Query<T>().SingleOrDefault(filter);
+            }
         }
 
         public List<T> GetList(Expression<Func<T, bool>> filter = null)
         {
-            throw new NotImplementedException();
+            using (var session = _nHibernateHelper.OpenSession())
+            {
+                return filter==null ?  session.Query<T>().ToList() : session.Query<T>().Where(filter).ToList();
+            }
         }
 
         public T Update(T entity)
         {
-            throw new NotImplementedException();
+            using (var session = _nHibernateHelper.OpenSession())
+            {
+                session.Update(entity);
+                session.Flush();
+                session.Clear();
+                return entity
+            }
         }
     }
 }
