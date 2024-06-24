@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Linq.Expressions
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Base.DB.Manager
@@ -66,7 +66,7 @@ namespace Base.DB.Manager
                 session.Update(entity);
                 session.Flush();
                 session.Clear();
-                return entity
+                return entity;
             }
         }
     }
