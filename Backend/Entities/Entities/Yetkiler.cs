@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace Entities.Entities
 {
-    public  class Sehirler : IEntity
+    public  class Yetkiler : IEntity
     {
         public virtual int Id { get; set; }
         public virtual string Ad { get; set; }
-        public virtual int ParentId { get; set; }
     }
 }

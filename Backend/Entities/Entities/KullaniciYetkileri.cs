@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace Entities.Entities
 {
-    public  class Sehirler : IEntity
+    public class KullaniciYetkileri : IEntity
     {
         public virtual int Id { get; set; }
-        public virtual string Ad { get; set; }
-        public virtual int ParentId { get; set; }
+        public virtual Yetkiler YetkiId { get; set; }
+        public virtual Personel PersonelId { get; set; }
+        public virtual string Sifre { get; set; }
     }
 }
