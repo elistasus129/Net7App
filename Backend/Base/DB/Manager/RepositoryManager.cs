@@ -55,7 +55,7 @@ namespace Base.DB.Manager
         {
             using (var session = _nHibernateHelper.OpenSession())
             {
-                return filter==null ?  session.Query<T>().ToList() : session.Query<T>().Where(filter).ToList();
+                return filter==null ? session.Query<T>().ToList() : session.Query<T>().Where(filter).ToList();
             }
         }
 
